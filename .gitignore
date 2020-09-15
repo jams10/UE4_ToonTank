@@ -78,3 +78,6 @@ Content/StarterContent/*
 
 # Custom Model Files
 Content/Models/*
+
+# Custom Asset Files
+Content/Assets/*
