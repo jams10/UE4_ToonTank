@@ -1,0 +1,11 @@
+{
+	"files.exclude": {
+		"E:/Unreal Projects/UE4_ToonTank/.git": true,
+		"E:/Unreal Projects/UE4_ToonTank/.vs": true,
+		"E:/Unreal Projects/UE4_ToonTank/.vscode": true,
+		"E:/Unreal Projects/UE4_ToonTank/Content": true,
+		"E:/Unreal Projects/UE4_ToonTank/DerivedDataCache": true,
+		"E:/Unreal Projects/UE4_ToonTank/Intermediate": true,
+		"E:/Unreal Projects/UE4_ToonTank/Saved": true
+	}
+}

@@ -1,0 +1,19 @@
+1. 본 게임에 사용되는 Tank는 Vehicle Class 같은 타입의 클래스를 이용할 것임.
+   이는 Character Class에 포함되어 있는 달리기나 점프 등의 복잡한 기능이 필요 없음.
+   따라서, Pawn 이나 Actor Class를 base class로 삼는 것이 좋음.
+
+2. Actor 클래스 아래 Pawn 클래스가 존재. Pawn 클래스가 컨트롤러를 받아 움직이므로,
+   Pawn 클래스를 베이스 클래스로 삼았음.(부모 클래스를 Pawn 클래스로 하여 클래스 생성함.)
+
+3. 프로젝트에서 사용할 커스텀 클래스가 많으므로, 클래스 생성시에 미리 경로를 만들어 넣어주자.
+   ex) Name : PawnBase
+       Path : ~/~/Pawns/PawnBase
+
+4. Unreal 코드 에디터를 VS Code로 변경하기
+   
+   1. 우선 에디터에서 에디터 세팅 - 소스 코드 부분에서 VS Code로 변경.
+   2. 언리얼 에디터 재시작후 Generate VS code - 열기
+   3. VS Code에서 인텔리전스 버그가 발생하는데 이는 리포지토리에 있는 defines를
+      .vscode에 있는 c_cpp_properties.json의 defines 부분과 교체.
+   4. defines 맨 아래 있는 UE_PROJECT_NAME 에 프로젝트 이름을 적어 넣기.
+   5. 아래 두 부분은 모두 대문자로 프로젝트 이름을 넣어줌. (_API의 경우 커스텀 클래스의 클래스 이름 앞에 붙어있는 이름과 같아야 함.)
