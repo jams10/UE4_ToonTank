@@ -44,3 +44,6 @@
 
 8. 에디터에서 더 사용하기 편하게 C++ 클래스를 기반으로한 블루 프린트 클래스를 만들어 사용할 수 있다.
    여기서는  PawnBase 라는 C++ 클래스를 만들고, 이를 기반으로 하여 PawnTank, PawnTurret 블루 프린트 클래스를 만들어 주었다.
+
+9. UPROPERTY() 에서 meta = (AllowPrivateAccess = "true")를 통해, 컴파일러로 하여금 Visibility가 특정된 Blueprint에 Private Property들을 
+   공개해줌.(expose)
