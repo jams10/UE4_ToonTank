@@ -47,3 +47,6 @@
 
 9. UPROPERTY() 에서 meta = (AllowPrivateAccess = "true")를 통해, 컴파일러로 하여금 Visibility가 특정된 Blueprint에 Private Property들을 
    공개해줌.(expose)
+
+10. ChildClass 생성시 헤더파일 경로 문제로 오류가 발생할 수 있음. 해당 프로젝트에서는 PawnTank 클래스 파일 생성시에
+     헤더 파일 경로가 이미 파일이 Pawns 폴더 안에 있음에도 불구하고 Pawns/PawnBase.h 로 되어 있어 PawnBase.h로 변경해 컴파일 했음.
