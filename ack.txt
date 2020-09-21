@@ -50,3 +50,5 @@
 
 10. ChildClass 생성시 헤더파일 경로 문제로 오류가 발생할 수 있음. 해당 프로젝트에서는 PawnTank 클래스 파일 생성시에
      헤더 파일 경로가 이미 파일이 Pawns 폴더 안에 있음에도 불구하고 Pawns/PawnBase.h 로 되어 있어 PawnBase.h로 변경해 컴파일 했음.
+
+11. AddActorLocalOffest() 함수에서 bSweep의 의미 : 플레이어가 이동할 때 콜리젼 체크를 할 것인지의 여부.
