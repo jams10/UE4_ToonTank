@@ -57,3 +57,23 @@
 
 13. Editor로 Expose한 변수 값들을 조정할 때, 플레이 상태에서 F8로 빠져나온 뒤 캐릭터 오브젝트를 누르고, 디테일 패널에서 
     해당 변수를 검색, 값을 바꿔가면서 실시간으로 테스트하고 최적의 값을 찾은 뒤에 최종적으로 변경해주자.
+
+14. 게임플레이 타이머
+     타이머를 통해 딜레이 이후 또는 일정 시간에 걸쳐 동작을 수행하도록 스케쥴을 잡습니다. 
+     예를 들어, 플레이어가 어떤 아이템을 습득하면 10 초간 무적이 되었다가 원래대로 돌아가는 것입니다. 
+     또는, 플레이어가 독가스로 가득찬 방에 있는 동안 매 초마다 대미지를 적용할 수도 있습니다. 
+     이러한 효과 모두 타이머를 통해 이뤄낼 수 있습니다.
+
+     예제 코드 : https://docs.unrealengine.com/ko/Programming/UnrealArchitecture/Timers/index.html
+
+     FTimerHandle : 타이머를 컨트롤하기 위한 구조체
+
+        GetTimerManager().SetTimer(
+        ObjectCheckTimer,    // TimerHandle
+        this,    // FTimerDelegate 델리게이트 수행 객체
+        &UABGameInstance::CheckUObjectAlive,    // FTimerDelegate (TimerManager.h 확인)
+        1.0f,    // Interval
+        true,    // 반복 여부 (false : 1회만)
+        5.0f    // 최초 Interval, 이것이 0이면 Interval이 사용됨
+
+15. Kismet : 언리얼 3의 비주얼 스크립팅 이름. 4로 넘어오면서 Kismet이 블루프린트가 됨. 그냥 이 이름을 그대로 사용하는 것.
