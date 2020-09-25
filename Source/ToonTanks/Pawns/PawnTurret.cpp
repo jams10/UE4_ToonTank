@@ -15,6 +15,7 @@ void APawnTurret::BeginPlay()
     // GetWorld()->GetTimerManager() = GetWorldTimerManager()
 
     PlayerPawn = Cast<APawnTank>(UGameplayStatics::GetPlayerPawn(this,0));
+
 }
 
 // Called every frame
