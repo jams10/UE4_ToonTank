@@ -18,10 +18,24 @@ void APawnTurret::BeginPlay()
 
 }
 
+void APawnTurret::HandleDestruction() 
+{
+    // 이펙트 효과 재생 위해 base pawn 클래스의 함수 호출.
+    Super::HandleDestruction();
+    Destroy();
+}
+
 // Called every frame
 void APawnTurret::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+    if(!PlayerPawn || ReturnDistanceToPlayer() > FireRange)
+    {
+        return;
+    }
+
+    RotateTurret(PlayerPawn->GetActorLocation());
 }
 
 void APawnTurret::CheckFireConditon() 
@@ -34,8 +48,7 @@ void APawnTurret::CheckFireConditon()
     // If Player is in range then fire
     if(ReturnDistanceToPlayer() <= FireRange)
     {
-        // Fire
-        UE_LOG(LogTemp, Warning, TEXT("Fire Condition Check"));
+        Fire();
     }
 }
 

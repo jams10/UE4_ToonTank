@@ -84,3 +84,5 @@
 
      모든 UObject 클래스에는 그 부모 클래스로 설정된 커스텀 "Super" typedef 가 있어, 덮어쓰기 행위에 대한 제어가 쉽게 가능.
      ex) Super::TEST(); -> 부모 클래스의 TEST() 함수 호출.
+
+17. BindAxis는 시간에 따라 증감하는 값(이동). BindAction은 두 가지 상태(Press / Release) (점프, 사격)
