@@ -56,10 +56,16 @@ void APawnBase::HandleDestruction()
 	// 죽었을 때 효과 재생, 소리, 카메라 흔들림.
 
 	UGameplayStatics::SpawnEmitterAtLocation(this, DeathParticle, GetActorLocation());
+	UGameplayStatics::SpawnSoundAtLocation(this, DeathSound, GetActorLocation());
 
 	// - 자식 클래스가 override
 	// PawnTurret : 터렛이 죽음 -> 자기 자신 destroy
 	// PawnTank : 플레이어가 죽음 -> 모든 컴포넌트 숨기기 & 입력 받지 않기.
+}
+
+void APawnBase::PawnDestroyed() 
+{
+	HandleDestruction();
 }
 
 
