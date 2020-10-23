@@ -57,6 +57,7 @@ void APawnBase::HandleDestruction()
 
 	UGameplayStatics::SpawnEmitterAtLocation(this, DeathParticle, GetActorLocation());
 	UGameplayStatics::SpawnSoundAtLocation(this, DeathSound, GetActorLocation());
+	GetWorld()->GetFirstPlayerController()->ClientPlayCameraShake(DeathShake);
 
 	// - 자식 클래스가 override
 	// PawnTurret : 터렛이 죽음 -> 자기 자신 destroy
